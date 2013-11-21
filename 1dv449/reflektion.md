@@ -1,0 +1,9 @@
+1. Dels valde jag cURL och DomDocument med Xpath fšr att det fanns introduktionsvideor till dessa, men samtidigt fšr att cURL pŒ ett smidigt vis kan stŠllas in pŒ mŒnga olika sŠtt. Hanteringen och kakor och automatiskt fšljande av location gjorde en del av mitt arbete lŠttare.
+
+2. 1. Skulle designen Šndras kommer skraparen fšrmodligen inte att fungera lŠngre. 2. Kan vara en onšdig belastning pŒ servern dŒ mycket data mŒste hŠmtas hem fšr att kanske egentligen bara plocka ut lite av den. BŠttre med APIer. 3. VŠljer den som publicerar datan att Šndra pŒ innehŒllet kan det fŒ elaka fšljder fšr den som skrapar innehŒllet. Felaktigt resultat kan komma att publiceras.
+
+3. Jag har ej blivit klar med ASP.NET WebForms sŒ inte helt hundra pŒ hur detta skiljer sig, men tror att man mŒste skicka upp mer data till servern fšr att det ska bli rŠtt med session och annan persistens om jag inte har helt fel fšr mig.
+
+4. Vet inte om jag skapat en god webbskrapare direkt. Jag har satt en sleep(1) i koden fšr att fŒ det att se naturligare ut och minska belastningen (frŠmst fšr att minska risken att dom ska tro att jag Šr en skrapare dock och att inte flera anrop gšrs pŒ en och samma gŒng). Givetvis vill jag minimera antalet anrop men blir ŠndŒ en hel del.
+
+5. Har lŠrt mig att det kan vara lite bškigt att skrapa sidor med inloggning fšr kan finnas saker som man mŒste skicka med som man inte har full koll pŒ. I mitt fall AuthURL. En annan sak Šr att jag hade lite problem med att cookies inte sparades ner ordentligt sŒ jag skapar en ny cURL i de flesta fall fšr att "mellanlanda lite kakor". (Tror i alla fall att det var detta som var problemet)

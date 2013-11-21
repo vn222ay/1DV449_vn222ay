@@ -1,0 +1,63 @@
+body {
+	font-family: Verdana;
+	color: #444;
+	font-size: 1em;
+	margin: 20px auto;
+	width: 800px;
+	line-height: 1.6em;
+}
+
+a {
+	color: #559;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h2 {
+	font-size: 1.6em;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+
+p {
+	margin-bottom: 1em;
+}
+
+.movie {
+	padding: 20px;
+	width: 600px;
+	clear: both;
+	padding-bottom: 40px;
+	margin: 20px;
+	background: #f5f5f5;
+	border-radius: 10px;
+}
+
+.movie img {
+	width: 200px;
+	float: left;
+	border-radius: 5px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.movie p {
+	width: 350px;
+	float: left;
+}
+
+.movie img:hover {
+	opacity: 0.9;
+}
+
+.clearboth {
+	clear: both;
+}
+
+.bold {
+	font-weight: bold;
+}
