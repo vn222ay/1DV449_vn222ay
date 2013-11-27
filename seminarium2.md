@@ -1,0 +1,33 @@
+#1.1#
+Givetvis svårt att säga hur vi kommer använda webben i framtiden men jag skulle tippa på att vi får se en mer obegränsad web och jag tror själv att vi är på väg mot i alla fall betydligt mer webb (kanske inte 100% webb men mycket webb!). För 10 år sedan var det nog svårt att se ett alternativ till Office Word vara en molntjänst likt Google Docs och likaså har vi nog mycket att se fram emot också. Fler och fler tjänster kommer säkerligen gå från att vara native-program för olika OS till att köras direkt i webbläsaren, vilket har stora fördelar i underhåll av program och appar utan fokus kan helt läggas på att göra en riktigt bra tjänst på servern, och ta del av den genom webbläsaren.
+För mig personligen är det redan mycket webb. Det första jag gör är att köra igång en webbläsare och det mesta jag gör gör jag genom den. Givetvis användare jag tjänster så som Skype, olika mediaspelare så som VLC med mera, och vissa av dessa kan nog komma att köras webbaserat. Jag kan tänka mig att tjänster så som Skype kan börja bli helt webbaserade utan native-appar. Jag tror många av programen man har, istället för att vara genvägar till program, vara genvägar till tjänster på webben och med anpassade fönsterstorlekar och design, för att inte få varenda fönster att se identiska ut, vilket jag tycker har varit ett problem med för många webbläsarfönster öppna på en och samma gång.
+
+#1.2#
+Jag tror många av de tjänster folk kommer börja användare mer och mer redan har börjat synas på webben. Ordbehandling på webben tror jag komemr öka mer och mer nu när det finns tekniker för att spara undan större mängd data och kommunicera med servern på ett bättre sätt här. För att hitta nya tjänster kan man bara kolla vilka program man har på datorn och nu hittar jag exempelvis min svenska spel pokerklient vilket påminner mig om att man ofta behöver ladda hem sådan programvara. Men varför inte låta denna vara helt nätbaserad? Hade varit spännande och se något likt photoshop som en webbtjänst också.
+
+#1.3#
+Jag kan tänka mig att man kan få en hel del hjärngympa när man ska försöka ta program och göra dessa webbaserade. I vissa fall finns tekniken där, men som alltid är det svårt när det kommer till att anta att användare har stöd för en viss teknik även fast tekniken finns. Vi vet hur det är med javascript. Jag tror att rollen som webbutvecklare kommer att förändras och bli en bredare roll med fler områden när mer och mer bli tjänster tillgängliga i webbläsaren. Från att ha varit extratjänster och lite lyx med internet och webben, tror jag att, som vi redan har i dag, få tjänster där man bär ett tungt ansvar att tjänster fungerar stabilt och korrekt då jag tror att mer fundamentala och viktiga tjänster kommer att köras i webbläsaren. I och med detta kommer webbläsaren förmodligen behöva öppna upp datorn lite mer för webbtjänsten (exempelvis GPS kordinater) och med detta kommer även ansvar att kunna hantera säkerheten kring sådant.
+
+
+#1.4#
+Att de kommer bli 100% webb är jag rätt övertygad om borde ses som något vi kanske kan sträva efter, men allting kommer omöjligt kunna köras på webben. Dock borde alla tjänster som kan köras genom en webbläsare utvecklas i den riktningen då det gör det möjligt att köra de flesta tjänster i de flesta miljöer utan att, som tidigare nämnt, lägga kraft på klienterna i form att anpassade program för olika OS. Rollen hos webbläseutvecklarna kommer att öka och här kommer givetvis också ligga ansvar, vilket det redan finns rätt gott om och de flesta webbläsare verkar sköta sig bra på denna biten. Problemet kvarstår dock att alla inte uppdaterar sina webbläsare vilket kan vara ett hinder för 100% webb då i viss utsträkning.
+
+#1.4#
+Om jag bara fick använda webbläsaren idag hade jag saknat en hel del, dels för att jag inte gått över till att köra alla tjänster på webben som det finns möjlighet till. Jag trivs fortfarande bra i min lokala kod-editor. Antivirusprogram i datorn kan blis vårt att köra genom webbaserade tjänster även fast data angående virus förmodligen hämtas på detta vis, kommer ingreppen mot virus och andra tråkigheter troligen behöva köras lokalt för att få tillgång och rättighet på ett smidigt vis. Men vem vet!
+
+
+#2.1#
+För mig är öppen data information som helt enkelt delas med sig på ett sådant sätt att vem som helst kan ta del av denna information, även tredjeparter så som externa tjänster för väder exempelvis. Det kan vara allt från väderprognoser till statistik inom kommuner med mera. Det ska även vara information som ej är känslig på någotvis.
+
+#2.2#
+Kravet tycker jag är lite som nämnt ovan, tillgängligt för alla även för andra utvecklare och tjänster. Den ska alltså inte bara vara publik, utan gjord tillgänglig på ett strukturerat sätt.
+
+#2.3#
+Det kommer att ge oss möjligheter att utveckla fler typer av tjänster på ett enklare och säkrare sätt. Att skrapa data från sidor har många problem och organiserad data genom APIer etc gör att det dels är ett medvetet val från "leverantören" att leverera data och kommer därför försöka se till att detta sköts korrekt. En webbplats som skrapas kanske inte ens känner till vilka tjänster som bygger på denna och en designändring kan ställa till med mycket.
+Jag tror även man kan i kombination av olika öppen data skapa tjänster som levererar ett mervärde förutom datan som redan finns tillgänglig. Väderinformation i samband med en kommuns olika event kanske kan skapa förslag för dagsaktiviteter beroende på vädret exempelvis. Det kommer även göra det betydligt enklare för oss att utveckla applikationer samt även mer långsikta tjänster i form av att informationen levereras på ett strukturerat och medvetet sätt och inte genom skrapor eller dyl.
+
+#2.4#
+Något som jag gärna hade utvecklat är en parkeringsapp och jag vet att många parkeringar kan visa hur många platser som finns tillgängliga och kommunerna borde känna till denna information. Jag hade önskat att Lunds kommun som jag tillhör, hade kunnat släppa denna data i relativt uppdaterat format för att sedan utveckla webbaserade tjänster för att kunna få reda på var närmsta lediga parkering finns. Givetvis kommer enbart information om de större parkeringsplatserna finnas, men jag tror att detta hade kunnat vara en typ av öppen data som ej hade kunnat skada något och som jag önskar hade funnits i ett strukturerat API.
+
+#2.5#
+Risker finns alltid med att öppna upp saker, och jag tror att det kan vara svårt att förutse konsekvenserna av att släppa en viss typ av data fri. Jag tror dock efter att ha tänkt igenom riskerna, att öppen data kan gynna kommuner då det blir enklare för utvecklare att skapa appar som på ett naturligt och gratis vis kan promote'a event och
