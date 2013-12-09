@@ -1,12 +1,14 @@
 Rapport för laboration 2 - 1DV449
 Av: Viktor Nilsson
 
+körbar version finns på <a href="http://vn222ay.se/1dv449/1DV449_L02/">http://vn222ay.se/1dv449/1DV449_L02/</a>
+
 ### Laddningstid ###
 
 Det fanns en hel del att göra för att optimera laddningstiden för sidan och dessa samt tiderna efter att förändringarna gjorts visas här nedan.
 Då det främst var inloggningen som tog tid gjordes flest tester här. Applikationen har under dessa tester körs från binero.
 
-Tider för inloggningen i sekunder.
+Tider för inloggningen i millisekunder.
 <pre>
 Gjort åtgärd:           1      2      3      4      5     6     7
 
