@@ -24,7 +24,7 @@ Tredje gången: 4270 - 2250 - 2020 - 3100 - 3030 -  424 - 367 -  496
  6. Minska bilderna - mindre data att skicka => snabbare (food.jpg)
  7. Minimera storleken på css- och js-filer.
  
- ### Mer om åtgärderna ###
+### Mer om åtgärderna ###
  
  1. Genom att ta bort GET-requests drar vi ner på laddningstiden så location's vill vi minimera. Sen tog jag även bort fulingen som gjorde att applikationen tog 2 sekunder extra att laddas. Som källa till denna åtgärd tar jag både boken och föreläsningarna då vi pratat mycket om att dra ner på antalet förfrågningar. Laddningstiden blev markant bättre främst på grund av de 2 sekunderna som applikationen pausade.
  2. Scriptet fanns ej och såg därför ingen anledning till att ha det med. Detta drog ner på ytterligare en GET-request även fast det nog inte gjorde speciellt mycket är det en av de små bäckarna. Laddningstiden blev konstig första gången men andra och tredje visar ändå på förbättring, frågan är dock om det gjorde så pass mycket som den visar. Samma referens som ovan.
