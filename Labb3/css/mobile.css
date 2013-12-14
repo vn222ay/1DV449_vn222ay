@@ -1,0 +1,8 @@
+.traficItem {
+    float: none;
+    width: auto;
+}
+#traficInformation {
+    max-width: none;
+    width: 100%;
+}

@@ -1,0 +1,112 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: tahoma, verdana, arial;
+	
+}
+
+#container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 5px;
+	height: 100%;
+	width: 100%;
+	
+}
+
+#map-canvas {
+	height: 50%;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0px 3px 5px #ccc;
+	margin-bottom: 20px;
+}
+
+#map-canvas h2 {
+	font-size: 1.8em;
+	margin: 5px;
+	text-align: center;
+}
+
+#map-canvas p {
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	font-size: 1.2em;
+}
+
+.dateText {
+	color: #77c;
+	font-size: 0.8em;
+}
+
+.infoText {
+	font-size: 0.8em;
+	color: #333;
+}
+
+li {
+	margin-left: 10px;
+	padding: 3px;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4em;
+	margin: 10px;
+}
+
+h2 {
+	font-size: 1.4em;
+	margin: 5px;
+	text-align: center;
+}
+
+#traficInformation {
+	overflow-y: scroll;
+	height: 50%;
+	background: #fff;
+	border-radius: 5px;
+}
+
+p {
+	padding-bottom: 5px;
+	color: #337;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.traficTime {
+	font-size: 0.8em;
+	color: #225;
+}
+
+#filterInformation {
+	text-align: center;
+	margin: 5px;
+}
+
+.traficItem:hover {
+	opacity: 0.8;
+}
+
+.traficItem {
+	/*background: #f3fff3;*/
+	background: #eef;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+.traficItem div {
+	padding: 5px;
+}
+
+.clearboth {
+	clear: both;
+}
