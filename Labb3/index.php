@@ -6,7 +6,6 @@
     <link href='http://fonts.googleapis.com/css?family=Life+Savers' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" media="only screen and (max-width: 800px)" href="css/mobile.css" />
     <title>Laboration 3</title>
   </head>
   <body>

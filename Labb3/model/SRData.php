@@ -11,6 +11,7 @@ class SRData {
     
     private $jsondata;
     
+    //Constructor
     public function __construct($maxObjects = 100) {
 
         if (filemtime(self::$staticDataFile) < time() - self::$cacheSeconds) {
@@ -29,6 +30,7 @@ class SRData {
         }
     }
     
+    //Returerar json
     public function rawOutput() {
         return json_encode($this->jsondata);
     }
@@ -42,19 +44,7 @@ class SRData {
             preg_match('/([0-9]{13})([\-\+0-9]{5})/', $this->jsondata[$i]->createddate, $parts);
             
             $seconds = round(intval($parts[1])/1000);
-            
-            /****
-             *Feltänk?
-             ****
-            $absgmt = intval(substr($parts[2], 1, 2));
-            
-            if ($parts[2][0] == '+') {
-                $seconds += $absgmt*60*60;
-            }
-            else {
-                $seconds -= $absgmt*60*60;
-            }
-            */
+        
             $this->jsondata[$i]->createddate = $seconds;
         }
     }
@@ -79,12 +69,14 @@ class SRData {
         }
     }
     
+    //Minimera antal objekt till $maxData
     private function reduceData($maxData) {
         if (count($this->jsondata) > $maxData) {
             array_splice($this->jsondata, $maxData);
         }
     }
     
+    //Spara undan som statisk fil
     private function saveCache() {
         file_put_contents(self::$staticDataFile, json_encode($this->jsondata));
     }
