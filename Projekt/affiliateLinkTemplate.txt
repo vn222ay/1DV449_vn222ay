@@ -1,0 +1,2 @@
+http://[URL]/[SCRIPT]
+?ordervalue=%ordervalue&ordertype=%ordertype&commission=%commission&epi=%epi&ip=%ip&clicktime=%clicktime&referrer=%referrer&ordertime=%ordertime&programid=%programid&channelid=%channelid&ect_keyword=%ect_keyword&ect_searchengine=%ect_searchengine&ect_time=%ect_time&ect_rank=%ect_rank&transactionid=%transactionid
