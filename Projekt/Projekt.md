@@ -2,7 +2,7 @@
 
 <p>Viktor Nilsson, vn222ay</p>
 
-<p>Testapplikation: <a href="http://83.254.136.119/Projekt"></a>
+<p>Testapplikation: <a href="http://83.254.136.119/Projekt">http://83.254.136.119/Projekt</a>
 <p>Genomför testförsäljning genom denna länk: <a href="http://83.254.136.119/Projekt/demosale.php">http://83.254.136.119/Projekt/demosale.php</a></p>
 <p>Presentation: <a href="http://www.vn222ay.se/PresentationProjekt.mp4">http://www.vn222ay.se/PresentationProjekt.mp4</a></p>
 
