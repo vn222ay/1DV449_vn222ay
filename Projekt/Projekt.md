@@ -4,6 +4,7 @@
 
 <p>Testapplikation: <a href="http://83.254.136.119/Projekt"></a>
 <p>Genomför testförsäljning genom denna länk: <a href="http://83.254.136.119/Projekt/demosale.php">http://83.254.136.119/Projekt/demosale.php</a></p>
+<p>Presentation: <a href="http://www.vn222ay.se/PresentationProjekt.mp4">http://www.vn222ay.se/PresentationProjekt.mp4</a></p>
 
 <h2>Inledning</h2>
 <p>Jag har ett par sidor där jag gör reklam genom affiliatenätverk och tyckte det skulle vara roligt att i realtid kunna bli uppdaterad när jag fick ersättning från detta affiliatenätverk. Det affiliatenätverk jag valde att jobba mot var Adrecord då dom har de funktioner och tjänster som krävs för att få detta att fungera. Det är enkelt att bygga ut applikationen för att fungera med flera olika nätverk samtidigt.</p>
